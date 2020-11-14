@@ -1,14 +1,13 @@
 import pandas
 
-from flask import Flask, render_template
-
-from .fleet import get_airlines
+from flask import render_template
 
 from plane_stats import app
+from plane_stats.fleet import get_airlines
 
 @app.route('/')
-def main():
-    return render_template('main.html')
+def index():
+    return render_template('index.html')
 
 @app.route('/fleet')
 def fleet():
