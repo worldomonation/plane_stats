@@ -1,14 +1,13 @@
 from flask_assets import Bundle, Environment
 
-# from . import app
+from plane_stats import app
 
-bundles = {
-    'main_css': Bundle (
-        'css/main.css',
-        output='gen/main.css'
-    )
-}
+style_bundle = Bundle(
+    'styles/main.css',
+    output='gen/style.min.css'
+)
 
-# assets = Environment(app)
+assets = Environment(app)
 
-# assets.register(bundles)
+assets.register('main_styles', style_bundle)
+style_bundle.build()

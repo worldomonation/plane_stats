@@ -1,0 +1,12 @@
+{% extends "public/templates/public_template.html" %}
+{% block title %}Fleet{% endblock %}
+
+{% block main %}
+
+<h1>Airline fleets around the world</h1>
+
+{% for table in tables %}
+    {{ table|safe }}
+{% endfor %}
+
+{% endblock %}

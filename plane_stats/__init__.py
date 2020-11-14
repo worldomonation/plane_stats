@@ -4,4 +4,5 @@ from flask import Flask
 # circular import.
 app = Flask(__name__)
 
-from . import routes
+from plane_stats import routes
+from plane_stats import assets

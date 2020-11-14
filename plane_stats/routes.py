@@ -13,7 +13,5 @@ def main():
 @app.route('/fleet')
 def fleet():
     airlines = get_airlines()
-    return render_template('fleet.html',
-                           tables=[airlines.to_html(index=False, 
-                                                    classes='table')]
-                          )
+    return render_template('public/fleet.html',
+                           tables=[airlines.to_html(index=False, classes='tale')])
