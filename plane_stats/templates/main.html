@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Main</title>
-</head>
-<body>
-   <h1>Index</h1>
+<!DOCTYPE html>{% extends "public/templates/public_template.html" %}
+{% block title %}Main{% endblock %}
 
-   <p><a href="{{ url_for('fleet') }}">Fleet broken down by airline</a></p>
-</body>
-</html>
+{% block main %}
+
+<p><a href="{{ url_for('fleet') }}">Fleet broken down by airline</a></p>
+
+{% endblock %}
