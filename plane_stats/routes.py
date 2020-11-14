@@ -14,4 +14,4 @@ def main():
 def fleet():
     airlines = get_airlines()
     return render_template('public/fleet.html',
-                           tables=[airlines.to_html(index=False, classes='tale')])
+                           data=airlines.to_html(table_id="table-fleet", index=False))
