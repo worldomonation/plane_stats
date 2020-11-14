@@ -1,1 +1,7 @@
-__version__ = '0.1.0'
+from flask import Flask
+
+# Has to be in this order, with the routes imported at bottom due to
+# circular import.
+app = Flask(__name__)
+
+from . import routes
